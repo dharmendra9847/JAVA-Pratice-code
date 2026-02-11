@@ -1,0 +1,57 @@
+package com.t3DARRAY;
+
+public class JaggedArray {
+
+	public static void main(String[] args) {
+		
+		// 3D-ARRAY
+		// 2-CLG | 3-DEPT | 4-STD
+		
+		int arr[][][] = {	
+				
+				{	//CLG-0
+					{10,11,12},		//DEPT-0
+					{14,15,16,17},		//DEPT-1
+					{18,19}		//DEPT-2
+				},
+				{	//CLG-1
+					{22,23,24,25},		//DEPT-0
+					{26,27,28,29},		//DEPT-1
+					{30,31,32}		//DEPT-2
+				}
+		};
+		
+		System.out.println(arr[0][1][2]);		// ELEMENT O/P: 21 
+		System.out.println(arr.length);			// ARRAY LENGHT: 2
+		System.out.println(arr[0].length);		// ARRAY DEPT LENGHT: 3
+		System.out.println(arr[0][0].length);	// ARRAY DEPT ELEMENT LENGHT: 4
+		
+		// ITERATION by FOR LOOP
+		for(int i = 0; i < arr.length; i++) {
+			
+			for(int j = 0; j < arr[i].length; j++) {
+				
+				for(int k = 0; k < arr[i][j].length; k++) {
+					
+					System.out.print(arr[i][j][k] + " ");
+				}
+				System.out.println();
+			}
+			System.out.println("\n");
+		}
+		
+		// ITERATION by FOR-EACH LOOP
+//		for(int k[][] : arr) {
+//			
+//			for(int l[] : k) {
+//				
+//				for(int ele : l) {
+//					
+//					System.out.print(ele + " ");
+//				}
+//				System.out.println();
+//			}
+//			System.out.println("\n");
+//		}
+	}
+}
